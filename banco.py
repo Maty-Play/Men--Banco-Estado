@@ -1,5 +1,5 @@
 import os, time
-os.system ("cls")
+os.system("cls")
 
 acceso = True
 while acceso:
@@ -46,14 +46,21 @@ while acceso:
             
             print(f"Total Acumulado: {acumulador_dep}")
             print(f"Cantidad Depositada: {cantidad_dep}")
-            
+            time.sleep(3)
         elif opcion == 3:
+            
             print("3. Tabla de crédito")
             credito = int(input("Ingrese el monto de credito: "))
             for i in range(1,13):
                 print(f"{credito} x {i}: ${credito*i}")
+            time.sleep(3)
         elif opcion == 4:
+            clientes = 0
             print("4. Contar clientes atendidos")
+            clientes = int(input("Ingrese la cantidad de clientes en el dia: "))
+            for i in range(1,clientes + 1):
+                print(f"Cliente atendido N°{i}")
+            time.sleep(3)
         elif opcion == 5:
             print("5. Salir")
             acceso = False
